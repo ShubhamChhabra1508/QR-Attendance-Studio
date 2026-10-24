@@ -77,13 +77,24 @@ nav, .nav-links {
   gap: 10px;
   flex-wrap: wrap;
 }
-/* Active Navigation Tab Highlight */
-.nav-links a.active {
-  background-color: var(--brand, #2563eb);
-  color: #ffffff !important;
-  font-weight: 600;
-  border-radius: 8px;
+/* Navigation Links Default */
+nav a, .nav-links a {
+  display: inline-flex;
+  align-items: center;
   padding: 6px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text, #334155);
+  transition: all 0.2s ease;
+}
+
+/* Active Navigation Tab Highlight - Dark Purple */
+.nav-links a.active {
+  background-color: #581c87 !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  box-shadow: 0 2px 6px rgba(88, 28, 135, 0.35);
 }
 nav a, .nav-links a {
   display: inline-flex;
