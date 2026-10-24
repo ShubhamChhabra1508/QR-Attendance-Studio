@@ -36,10 +36,10 @@
           <span style="text-transform: capitalize; color: var(--brand); font-weight: 700;">({{ current_user.role }})</span>
         </span>
         {% if current_user.role in ['admin', 'teacher'] %}
-          <a href="{{ url_for('admin_dashboard') }}">Dashboard</a>
-          <a href="{{ url_for('manage_teachers') }}">Teachers</a>
-          <a href="{{ url_for('manage_students') }}">Students</a>
-          <a href="{{ url_for('report') }}">Reports</a>
+          <a href="{{ url_for('admin_dashboard') }}" class="{{ 'active' if request.endpoint == 'admin_dashboard' else '' }}">Dashboard</a>
+          <a href="{{ url_for('manage_teachers') }}" class="{{ 'active' if request.endpoint == 'manage_teachers' else '' }}">Teachers</a>
+          <a href="{{ url_for('manage_students') }}" class="{{ 'active' if request.endpoint == 'manage_students' else '' }}">Students</a>
+          <a href="{{ url_for('report') }}" class="{{ 'active' if request.endpoint == 'report' else '' }}">Reports</a>
         {% else %}
           <a href="{{ url_for('student_dashboard') }}">My Dashboard</a>
         {% endif %}
