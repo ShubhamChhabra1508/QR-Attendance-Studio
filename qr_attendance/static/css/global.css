@@ -656,4 +656,31 @@ footer, .site-footer {
 .modal-body {
   padding: 20px 22px;
 }
+/* Responsive Auto-Resizing Table */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto; /* Automatically adjusts column widths to cell content */
+}
+
+table th,
+table td {
+  padding: 12px 16px;
+  text-align: left;
+  white-space: nowrap; /* Prevents awkward single-word wrapping */
+}
+
+/* Optional: Allow the longest column (like student name or session) to wrap if needed */
+table td.wrap-text {
+  white-space: normal;
+  word-break: break-word;
+}
